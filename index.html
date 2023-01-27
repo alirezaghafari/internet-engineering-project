@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web programming course</title>
+    <link rel="icon" href="img/favicon.png" type="image/icon type">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Design A Part for PopUp Windows -->
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="spanClick()">&times;</span>
+            <section>
+
+                <img src="" class="modal_img" id="modal_img">
+
+                <div class="modal_dscr">
+                    <h1 style="text-align: center; font-size: 28px; font-family: Sans-Serif">Start Reading Now</h1>
+                    <p style="margin-left: 350px" id="book_dscr"></p>
+                </div>
+                <a href="" id="buyLink"><button id="buyBtn">BUY</button></a>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Design the MENU As a PopUp Window-->
+    <div id="menu" class="menu">
+        <div class="menu_content">
+            <span class="close" onclick="spanClick2()">&times;</span>
+            <section>
+                <ul class="menu_box">
+                    <a href="#HEADER"><li>01 - START</li></a>
+                    <a href="#LECTURES"><li>02 - COURSE LECTURES</li></a>
+                    <a href="#related_title"><li>03 - RELATED BOOKS</li></a>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Using Grid -->
+    <div class="grid-container">
+        <!-- Header -->
+        <div class="item1" id="HEADER">
+            <div class="header">
+                <br>
+                <h2 class="headerText">Internet Engineering</h2>
+                <h5 class="headerText">Is What We Are Going To <br> Learn In This Course</h5>
+
+                <a href="#related_title"><button class="headerBtn">SEE THIS COURSE RELATED BOOKS</button></a>
+            </div>
+        </div>
+
+        <!-- Lectures -->
+        <div class="item2" id="LECTURES">
+            <div class="lectures">
+                <div class="lecture1">
+                    <div class="lecture_icons">
+                        <img src="img/http_icon.png">
+                    </div>
+                    <div class="lecture_dscr">
+                        <p class="lecture_title">HTTP</p>
+                        <p class="dscr">The Hypertext Transfer Protocol is an application layer protocol in the Internet protocol suite model for distributed, collaborative, hypermedia information systems.</p>
+                    </div>
+                </div>
+                <div class="lecture2">
+                    <div class="lecture_icons">
+                        <img src="img/css_icon.png">
+                    </div>
+                    <div class="lecture_dscr">
+                        <p class="lecture_title">HTML CSS</p>
+                        <p class="dscr">Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+                    </div>
+                </div>
+                <div class="lecture3">
+                    <div class="lecture_icons">
+                        <img src="img/js_icon.png">
+                    </div>
+                    <div class="lecture_dscr">
+                        <p class="lecture_title">JS</p>
+                        <p class="dscr">JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.</p>
+                    </div>
+                </div>
+                <div class="lecture4">
+                    <div class="lecture_icons">
+                        <img src="img/go_icon.png">
+                    </div>
+                    <div class="lecture_dscr">
+                        <p class="lecture_title">GOLANG</p>
+                        <p class="dscr">Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popular Books -->
+        <div class="item3">
+            <!-- <p id="related_title">MOST POPULAR BOOKS</p> -->
+            <div>
+                <a id="related_title">MOST POPULAR BOOKS</a>
+            </div>
+            <div class="related_books">
+                <div class="related_books1" disabled onclick="open_popup('js_key')" onmouseover="mouse_on_related('js_name','js_pr','js_key')" onmouseout="mouse_off_related('js_name','js_pr','js_key')">
+                    <div class="related_books_icons">
+                        <img src="img/Book1-2.png">
+                    </div>
+                    <div class="related_books_dscr">
+                        <button class="dscr" id="js_name">By David Flanagan</button><br>
+                        <button class="dscr" id="js_pr">Seventh Edition</button><br>
+                        <button class="dscr" id="js_key">Published at 2020</button>
+                    </div>
+                </div>
+                <div class="related_books3" disabled onclick="open_popup('go_key')" onmouseover="mouse_on_related('go_name','go_pr','go_key')" onmouseout="mouse_off_related('go_name','go_pr','go_key')">
+                    <div class="related_books_icons">
+                        <img src="img/golang.png">
+                    </div>
+                    <div class="related_books_dscr">
+                        <button class="dscr" id="go_name">By Caleb Droxsey</button><br>
+                        <button class="dscr" id="go_pr">First Edition</button><br>
+                        <button class="dscr" id="go_key">Published at 2016</button>
+                    </div>
+                </div>
+                <div class="related_books2" disabled onclick="open_popup('react_key')" onmouseover="mouse_on_related('react_name','react_pr','react_key')" onmouseout="mouse_off_related('react_name','react_pr','react_key')">
+                    <div class="related_books_icons">
+                        <img src="img/Book2-2.jpg">
+                    </div>
+                    <div class="related_books_dscr">
+                        <button class="dscr" id="react_name">By Robin Wieruch</button><br>
+                        <button class="dscr" id="react_pr">2022 Edition</button><br>
+                        <button class="dscr" id="react_key">Published at 2022</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="Footer">
+            <div id="footer">
+                <div class="contact">
+                    <a class="links">CLASS INFO</a>
+                    <a class="links">CONTACT US</a>
+                    <a class="links">PRIVACY POLICY</a>
+                    <a class="links">TERMS</a>
+                </div>
+                <div class="host">
+                    <a class="links"> Designed by Alireza Ghafari <br> areza.ghafari01@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
